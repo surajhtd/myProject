@@ -1,12 +1,12 @@
 pipeline {
-  agent { label 'linux' }
+  agent { label 'master' }
   tools {
-    maven 'M3'
+    maven 'maven384'
   }
   stages {
     stage('checkout') {
       steps {
-        git 'https://github.com/effectivejenkins/myProject.git'
+        git 'git@github.com:surajhtd/myProject.git'
       }
     }
     stage('Build') {
